@@ -38,3 +38,23 @@ getClass.addEventListener('click', ()=>{
     const listElement = document.getElementById('list');
     listElement.appendChild(li);
   },false);
+
+  const replaceNode = document.getElementById('button6');
+  replaceNode.addEventListener('click', ()=>{
+    const newList = document.createElement('li');
+    newList.setAttribute('id','newList');
+    const newText = document.createTextNode('li作成⇦id属性追加⇦子追加→id取得し親nodeを代入⇦子を置換');
+    newList.appendChild(newText);
+    const oldList = document.getElementById('oldList');
+    const parentNode = oldList.parentNode;
+    parentNode.replaceChild(newList, oldList);
+  },false);
+
+  const deleteNode = document.getElementById('deleteButton');
+  deleteNode.addEventListener('click', ()=>{
+    const parentElement = document.getElementById('deleteList');
+    const elements = document.getElementsByTagName('li');
+    const removeIndex = elements.length - 1;
+    // console.log(removeIndex);
+    parentElement.removeChild(elements[removeIndex]);
+  },false);
