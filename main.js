@@ -28,3 +28,13 @@ getClass.addEventListener('click', ()=>{
   }
   },false);
   
+  const appendNode = document.getElementById('button5');
+  appendNode.addEventListener('click', ()=>{
+    const li = document.createElement('li');
+
+    const text = document.createTextNode('liタグ作成⇦テキスト作成⇦子追加→ulをget⇦li子追加');
+    li.appendChild(text);
+
+    const listElement = document.getElementById('list');
+    listElement.appendChild(li);
+  },false);
