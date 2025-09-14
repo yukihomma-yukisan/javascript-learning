@@ -58,3 +58,12 @@ getClass.addEventListener('click', ()=>{
     // console.log(removeIndex);
     parentElement.removeChild(elements[removeIndex]);
   },false);
+
+  const eventHandlerButton = document.getElementById('eventHandlerButton');
+  eventHandlerButton.onclick = () => {
+    console.log('clicked');
+  }
+
+  window.onload = () =>{
+    console.log('ページをロードするとwindow.onloadが実行される')
+  }
